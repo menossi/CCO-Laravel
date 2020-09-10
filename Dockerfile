@@ -11,5 +11,5 @@ RUN composer global require laravel/installer && composer -vvv create-project --
 #O RUN executa comandos DENTRO do container. 
 RUN apt-get -y install nano vim
 
-
-ENTRYPOINT [ "tail","-f","/dev/null" ]
+WORKDIR /home/app/blog
+ENTRYPOINT ["php","artisan","serve","--host","0.0.0.0"]
