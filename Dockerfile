@@ -9,7 +9,7 @@ php7.4-zip php7.4-pgsql php7.4-mbstring unzip composer && mkdir -p /home/app
 WORKDIR /home/app
 RUN composer global require laravel/installer && composer -vvv create-project --prefer-dist laravel/laravel blog
 #O RUN executa comandos DENTRO do container. 
-
+RUN apt-get -y install nano vim
 
 
 ENTRYPOINT [ "tail","-f","/dev/null" ]
