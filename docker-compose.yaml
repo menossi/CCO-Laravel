@@ -2,8 +2,16 @@ version: "3"
 
 services: 
 
-  system-bd: 
-    image: postgres:9.6
+  system-laravel: 
+    image: menossi/laravel-container:latest
+    ports:
+      - "8000:8000"
+    networks:
+      - local
+
+  system-bd: #nome do container que será up
+    #build: laravel-container/Dockerfile -> outra opção, que cria a partir do Dockerfile e a utiliza no serviço
+    image: postgres:9.6 #imagem de container que será utilizada, 
     volumes:
       - "./postgres-container/pgdata:/var/lib/postgresql/data/pgdata"
     ports: 
@@ -11,7 +19,7 @@ services:
     environment:
       POSTGRES_USER: laravel_user
       POSTGRES_PASSWORD: laravel_password
-      POSTGRES_DB: larave_db
+      POSTGRES_DB: laravel_db
       PGDATA: /var/lib/postgresql/data/pgdata
 
     networks:
