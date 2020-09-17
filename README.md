@@ -17,9 +17,9 @@ Todos os serviços e portas, acessíveis via localhost:<porta>
 
 ### Dados de acesso ao banco
 
-POSTGRES_USER: laravel_user  
-POSTGRES_PASSWORD: laravel_password  
-POSTGRES_DB: laravel_db  
+**POSTGRES_USER:** laravel_user  
+**POSTGRES_PASSWORD:** laravel_password   
+**POSTGRES_DB:** laravel_db  
 
 ### Diretório de trabalho
 
