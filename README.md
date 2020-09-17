@@ -18,12 +18,16 @@ Todos os serviços e portas, acessíveis via localhost:<porta>
 ### Dados de acesso ao banco
 
 **POSTGRES_USER:** laravel_user  
-**POSTGRES_PASSWORD:** laravel_password   
+**POSTGRES_PASSWORD:**laravel_password
 **POSTGRES_DB:** laravel_db  
 
 ### Diretório de trabalho
 
 /home/app
+
+### Comandos Docker
+
+docker push menossi/laravel-container:latest <-> puxa a imagem de container utilizada em aula.  
 
 ### Pacotes instalados em container laravel-container
 
